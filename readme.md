@@ -12,7 +12,7 @@ A venir prochainemement :
 ### AVANT LA PROCEDURE
 Cloner le projet dans votre dossier de dev ou de prod
 ```bash
-  git@github.com:yoanbernabeu/symfony6-php8-in-docker-compose.git
+  git@github.com:Corwin40/StackSymfony.git
 ```
 Le fichier _docker-compose.yaml_ s'appuie sur un fichier _.env_ contenant vos futures variables nécessaire : à la base de donnée, aux differents ports attribués à vos conteneurs, ...
 Créez ce fichier avec les commandes suivantes :
@@ -48,29 +48,37 @@ La commande _build_ va construire l'image de votre serveur www contenant apache,
   docker-compose build
   docker-compose up -d
 ```
-#### II.A dépoiement d'un nouveau projet Symfony
-Connectez-vous au terminal du conteneur PHP
+#### II. déploiement du projet
+
+##### II. A déploiement d'un nouveau projet Symfony pour développement
+Connectez-vous au terminal du conteneur PHP, toutes les commandes suivantes se feront depuis le conteneur en root.  
+**Attention** : utilisez le nom du conteneur approprié selon votre projet.
 
 ```bash
   docker exec -it "nom_conteneur_www" bash
 ```
 
-Utilisez la commande symfony pour crer votre nouveau projet symfony. **Attention** : donner un nom différent à votre projet sans les guillements.
+Utilisez la commande symfony pour crer votre nouveau projet symfony. 
+**Attention** : donner un nom différent à votre projet sans les guillements.
 
 ```bash
   symfony new "nouveau_projet" --full
+```
+
+> Cette partie n'a pas encore été testée concernant le serveur interne à symfony.
+```
   cd new-project
   symfony serve -d
 ```
 
-Create an account (identical to your local session)
+Pour assurer votre développement à partir d'un IDE, créez un compte _user_ dans votre conteneur. se dernier sera identique  à votre session Linux et vous donnerons les droits sur le dossier.
 
 ```bash
   adduser username
   chown username:username -R .
 ```
 
-*Your application is available at http://127.0.0.1:9000*
+*L'application devrait être accessible a cette adresse : [http://127.0.0.1:9000](http://127.0.0.1:9000)*
 
 If you need a database, modify the .env file like this example:
 
@@ -99,5 +107,4 @@ Out of the box, this docker-compose is designed for a Linux operating system, pr
 - Docker
 - Docker-compose
 ## Author
-
-- 
+- xavier Burke - OpenPixl.fr    |     [Email](xavier.burke@openpixl.fr)  /  [Web](ww.openpixl.fr)
