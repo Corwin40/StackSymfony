@@ -1,5 +1,5 @@
-# OpenPixl
-## Stack DOCKER pour pour la production de site Symfony5 et Symfony6
+# OpenPixl - Stack Docker
+<small>pour la production de site Symfony5 et Symfony6</small>
 
 **Pour du DEV ou du PROD**
 
