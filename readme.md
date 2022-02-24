@@ -58,7 +58,7 @@ Connectez-vous au terminal du conteneur PHP, toutes les commandes suivantes se f
   docker exec -it "nom_conteneur_www" bash
 ```
 
-Utilisez la commande symfony pour crer votre nouveau projet symfony. 
+Utilisez la commande du _CLI Symfony_ pour créer votre nouveau projet. 
 **Attention** : donner un nom différent à votre projet sans les guillements.
 
 ```bash
@@ -78,7 +78,7 @@ Pour assurer votre développement à partir d'un IDE, créez un compte _user_ da
   chown username:username -R .
 ```
 
-*L'application devrait être accessible a cette adresse : [http://127.0.0.1:9000](http://127.0.0.1:9000)*
+*L'application devrait être accessible à cette adresse : [http://127.0.0.1:9000](http://127.0.0.1:9000)*
 
 If you need a database, modify the .env file like this example:
 
