@@ -18,8 +18,8 @@ Le fichier _docker-compose.yaml_ s'appuie sur un fichier _.env_ contenant vos fu
 Créez ce fichier avec les commandes suivantes :
 
 ```
-    cd StackSymfony
-    nano .env
+  cd StackSymfony
+  nano .env
 ```
 Puis copier/coller le contenu suivant.
 
