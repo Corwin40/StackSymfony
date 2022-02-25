@@ -78,7 +78,7 @@ Pour assurer votre développement à partir d'un IDE, créez un compte _user_ da
   chown username:username -R .
 ```
 
-*L'application devrait être accessible à cette adresse : [http://127.0.0.1:9000](http://127.0.0.1:9000)*
+*L'application devrait être accessible à cette adresse : [http://127.0.0.1:8001](http://127.0.0.1:8001)*
 
 If you need a database, modify the .env file like this example:
 
