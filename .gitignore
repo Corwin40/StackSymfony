@@ -1,2 +1,2 @@
 # Ingore le ficheir des variables stockées
-.env
+/.env

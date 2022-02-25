@@ -51,7 +51,7 @@ La commande _build_ va construire l'image de votre serveur www contenant apache,
 #### II. déploiement du projet
 
 ##### II. A déploiement d'un nouveau projet Symfony pour développement
-Connectez-vous au terminal du conteneur PHP, toutes les commandes suivantes se feront depuis le conteneur en root.  
+Connectez-vous au terminal du conteneur PHP, à partir de ce point, toutes les commandes se feront depuis le terminal du conteneur en root.  
 **Attention** : utilisez le nom du conteneur approprié selon votre projet.
 
 ```bash
@@ -65,13 +65,14 @@ Utilisez la commande du _CLI Symfony_ pour créer votre nouveau projet.
   symfony new "nouveau_projet" --full
 ```
 
-> Cette partie n'a pas encore été testée concernant le serveur interne à symfony.
+> Cette partie n'a pas encore été testée concernant le serveur interne à symfony.  
+
 ```
   cd new-project
   symfony serve -d
 ```
 
-Pour assurer votre développement à partir d'un IDE, créez un compte _user_ dans votre conteneur. se dernier sera identique  à votre session Linux et vous donnerons les droits sur le dossier.
+Pour assurer votre développement futur depuis un IDE, il vous faut créer un compte _user_ dans votre conteneur. Ce dernier sera identique à votre session Linux et et nous lui donnerons les droits d'accès dans ce conteneur.
 
 ```bash
   adduser username
@@ -80,7 +81,11 @@ Pour assurer votre développement à partir d'un IDE, créez un compte _user_ da
 
 *L'application devrait être accessible à cette adresse : [http://127.0.0.1:8001](http://127.0.0.1:8001)*
 
-If you need a database, modify the .env file like this example:
+##### II. B déploiement d'un projet Symfony existant depuis votre dépot Git.
+
+
+##### Connexion de l'application à la basse de données. 
+apr 
 
 ```yaml
   DATABASE_URL="postgresql://symfony:ChangeMe@database:5432/app?serverVersion=13&charset=utf8"
