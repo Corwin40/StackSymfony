@@ -1,10 +1,14 @@
 # OpenPixl - Stack Docker
-<small>pour la production de site Symfony5 et Symfony6</small>
+<small>Prete pour la production de site Symfony 5 et 6</small>
 
 **Pour du DEV ou du PROD**
 
 Construit à partir de l'image php8:apache et largement inspiré du dépot de [@yoanbernabeu](https://github.com/yoanbernabeu).  
 Merci à lui pour son travail.
+La stack se compose de :
+- [ x ] image PHP-8.0.13-cli (Debian) et les extensions php
+- composer, sympfony, nodeJS et Yarn
+- Mariadb dans sa dernière version
 
 A venir prochainemement :
 - [ ] Ajout du port https,
@@ -91,25 +95,5 @@ apr
   DATABASE_URL="postgresql://symfony:ChangeMe@database:5432/app?serverVersion=13&charset=utf8"
 ```
 
-## Ready to use with
-
-This docker-compose provides you :
-
-- PHP-8.0.13-cli (Debian)
-    - Composer
-    - Symfony CLI
-    - and some other php extentions
-    - nodejs, npm, yarn
-- postgres:13-alpine
-- mailcatcher
-
-
-## Requirements
-
-Out of the box, this docker-compose is designed for a Linux operating system, provide adaptations for a Mac or Windows environment.
-
-- Linux (Ubuntu 20.04 or other)
-- Docker
-- Docker-compose
 ## Author
 - xavier Burke - OpenPixl.fr    |     [Email](xavier.burke@openpixl.fr)  /  [Web](ww.openpixl.fr)
