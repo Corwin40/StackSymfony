@@ -5,7 +5,7 @@ networks:
   symfony:
     ipam:
       config:
-        - subnet: 172.22.0.0/16
+        - subnet: 172.{PROJECT_IP}.0.0/16
   # utilisation d'un réseau en place
   #Symfony:
 
@@ -26,7 +26,7 @@ services:
       MARIADB_PASSWORD: ${MARIADB_PASSWORD}
     networks:
       symfony:
-        ipv4_address: 172.22.1.1 # Mise en place d'une adresse IP_V4 fixe pour le container
+        ipv4_address: 172.{PROJECT_IP}.1.1 # Mise en place d'une adresse IP_V4 fixe pour le container
   
   # Eléments pour le Container "PhpMyAdmin"
   phpmyadmin:
@@ -44,7 +44,7 @@ services:
       MARIADB_PASSWORD: ${MARIADB_PASSWORD}
     networks:
       symfony:
-        ipv4_address: 172.22.1.2 # Mise en place d'une adresse IP_V4 fixe pour le container
+        ipv4_address: 172.{PROJECT_IP}.1.2 # Mise en place d'une adresse IP_V4 fixe pour le container
 
   # Elements de build pour le container serveur web
   www:
@@ -58,5 +58,5 @@ services:
     restart: ${RESTART}
     networks:
       symfony:
-        ipv4_address: 172.22.1.3 # Mise en place d'une adresse IP_V4 fixe pour le container
+        ipv4_address: 172.{PROJECT_IP}.1.3 # Mise en place d'une adresse IP_V4 fixe pour le container
 
