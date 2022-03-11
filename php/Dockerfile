@@ -15,7 +15,6 @@ RUN echo "en_US.UTF-8 UTF-8" > /etc/locale.gen && \
 RUN curl -sSk https://getcomposer.org/installer | php -- --disable-tls && \
    mv composer.phar /usr/local/bin/composer
 
-
 RUN curl -sS https://get.symfony.com/cli/installer | bash \
     &&  mv /root/.symfony/bin/symfony /usr/local/bin
 
@@ -27,5 +26,9 @@ RUN npm install --global yarn
 
 RUN git config --global user.email "xavier.burke@openpixl.fr" \
     &&  git config --global user.name "Xavier BURKE"
+    
+RUN addgroup --gid 1000 appuser; \
+  adduser --uid 1000 --gid 1000 --disabled-password appuser; \
+  adduser www-data appuser;
 
 WORKDIR /var/www/html
