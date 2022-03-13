@@ -19,7 +19,7 @@ A corriger prochainemement :
 
 Code :
 ```bash
-git@github.com:Corwin40/StackSymfony.git
+https://github.com/Corwin40/StackSymfony.git
 ```
 #### 2. Ajourt du fichier .env
 Le fichier _docker-compose.yaml_ s'appuie sur un fichier _.env_ contenant les variables nécessaire au déploiement de la stack et de votyre serveur: la base de donnée, les  differents ports attribués à vos conteneurs, ...
