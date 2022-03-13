@@ -9,10 +9,11 @@ La stack se compose de :
 - [x] image PHP-8.0.13-cli (Debian) et les extensions php
 - [x] composer, sympfony, nodeJS et Yarn
 - [x] Mariadb dans sa dernière version
+- [x] correction de gd pour php8 (manipulation d'image avec le bundle LiipImagine
 
 A corriger prochainemement :
 - [ ] Ajout du port https,
-- [ ] corection de gd pour php8
+
 
 ### AVANT LA PROCEDURE DE DEPLOIEMENT
 #### 1. Cloner le projet dans votre dossier de dev ou de prod
@@ -22,7 +23,7 @@ Code :
 https://github.com/Corwin40/StackSymfony.git
 ```
 #### 2. Ajourt du fichier .env
-Le fichier _docker-compose.yaml_ s'appuie sur un fichier _.env_ contenant les variables nécessaire au déploiement de la stack et de votyre serveur: la base de donnée, les  differents ports attribués à vos conteneurs, ...
+Le fichier _"docker-compose.yaml"_ s'appuie sur un fichier _".env"_ contenant les variables nécessaire au déploiement de la stack et de votyre serveur: la base de donnée, les  differents ports attribués à vos conteneurs, ...
 
 Créez ce fichier avec les commandes suivantes :
 
@@ -50,6 +51,21 @@ HTTP_HOST_PORT=80
 HTTPS_HOST_PORT=443
 MARIA_HOST_PORT=3307
 
+```
+#### 3. Personnalisation du fichier _vhost.conf_
+Pour finaliser la configuration de la stack, pensez à adapter le fichier _"vhosts.cnf"_ situé dans le dossier "php". Vous devez modifier les lignes suivantes par votre nom de projet.
+
+Ligne 4
+```bash
+DocumentRoot /var/www/html/"nom_du_projet"/public
+```
+Ligne 7
+```bash
+<Directory /var/www/html/"nom_du_projet"/public>
+```
+Ligne24
+```bash
+<Directory /var/www/html/"nom_du_projet"/public/bundles>
 ```
 
 ### PROCEDURE DE DEPLOIEMENT
