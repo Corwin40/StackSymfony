@@ -47,6 +47,7 @@ MARIADB_DBNAME="Nom_de_votre_ bdd"
 
 # Variables Serveur apache php
 HTTP_HOST_PORT=80
+HTTPS_HOST_PORT=443
 MARIA_HOST_PORT=3307
 
 ```
