@@ -5,7 +5,7 @@ RUN a2enmod rewrite
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
-    locales apt-utils git libicu-dev g++ libxml2-dev libzip-dev libonig-dev libxslt-dev unzip libpq-dev nodejs npm wget \
+    locales apt-utils git libicu-dev g++ libxml2-dev libzip-dev libonig-dev libxslt-dev unzip libpq-dev nodejs npm wget nano \
     libpng-dev libwebp-dev libjpeg62-turbo-dev libfreetype6-dev \
     apt-transport-https lsb-release ca-certificates
 
