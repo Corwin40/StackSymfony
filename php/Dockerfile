@@ -6,7 +6,7 @@ RUN a2enmod rewrite
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
     locales apt-utils git libicu-dev g++ libxml2-dev libzip-dev libonig-dev libxslt-dev unzip libpq-dev nodejs npm wget \
-    libpng-dev libwebp-dev libjpeg-turbo-dev freetype-dev \
+    libpng-dev libwebp-dev libjpeg62-turbo-dev libfreetype6-dev \
     apt-transport-https lsb-release ca-certificates
 
 RUN echo "en_US.UTF-8 UTF-8" > /etc/locale.gen && \
