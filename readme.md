@@ -6,19 +6,24 @@
 Construit à partir de l'image php8:apache et largement inspiré du dépot de [@yoanbernabeu](https://github.com/yoanbernabeu).  
 Merci à lui pour son travail.
 La stack se compose de :
-- [ v ] image PHP-8.0.13-cli (Debian) et les extensions php
-- composer, sympfony, nodeJS et Yarn
-- Mariadb dans sa dernière version
+- [x] image PHP-8.0.13-cli (Debian) et les extensions php
+- [x] composer, sympfony, nodeJS et Yarn
+- [x] Mariadb dans sa dernière version
 
-A venir prochainemement :
+A corriger prochainemement :
 - [ ] Ajout du port https,
+- [ ] corection de gd pour php8
 
-### AVANT LA PROCEDURE
-Cloner le projet dans votre dossier de dev ou de prod
+### AVANT LA PROCEDURE DE DEPLOIEMENT
+#### 1. Cloner le projet dans votre dossier de dev ou de prod
+
+Code :
 ```bash
-  git@github.com:Corwin40/StackSymfony.git
+git@github.com:Corwin40/StackSymfony.git
 ```
-Le fichier _docker-compose.yaml_ s'appuie sur un fichier _.env_ contenant vos futures variables nécessaire : à la base de donnée, aux differents ports attribués à vos conteneurs, ...
+#### 2. Ajourt du fichier .env
+Le fichier _docker-compose.yaml_ s'appuie sur un fichier _.env_ contenant les variables nécessaire au déploiement de la stack et de votyre serveur: la base de donnée, les  differents ports attribués à vos conteneurs, ...
+
 Créez ce fichier avec les commandes suivantes :
 
 ```
@@ -39,7 +44,9 @@ MARIADB_PASSWORD="votre_password_user"
 MARIADB_DBNAME="votre_nom_db"
 
 # Variables Serveur apache php
+MARIA_HOST_PORT=3307
 HTTP_HOST_PORT=80
+HTTPS_HOST_PORT=443
 ```
 
 ### PROCEDURE DE DEPLOIEMENT
@@ -83,7 +90,7 @@ Pour assurer votre développement futur depuis un IDE, il vous faut créer un co
   chown username:username -R .
 ```
 
-*L'application devrait être accessible à cette adresse : [http://127.0.0.1:8001](http://127.0.0.1:8001)*
+*L'application devrait être accessible à cette adresse : [http://127.0.0.1](http://127.0.0.1)*
 
 ##### II. B déploiement d'un projet Symfony existant depuis votre dépot Git.
 
