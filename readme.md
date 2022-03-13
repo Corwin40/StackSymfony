@@ -34,19 +34,21 @@ Puis copier/coller le contenu suivant.
 
 ```
 # Variable Project
-PROJECT="nom_project"
+PROJECT=sf5
+PROJECT_IP=21
+RESTART=no
 
 # Variables Mariadb
 PMA_HOST=db
-MARIA_ROOT_PASSWORD="votre_mot_de_passe"
-MARIADB_USER="votre_nom_user"
-MARIADB_PASSWORD="votre_password_user"
-MARIADB_DBNAME="votre_nom_db"
+MARIA_ROOT_PASSWORD="mot_de_passe_principale"
+MARIADB_USER="utilisateur"
+MARIADB_PASSWORD="mot_de_passe_utilisateur"
+MARIADB_DBNAME="Nom_de_votre_ bdd"
 
 # Variables Serveur apache php
-MARIA_HOST_PORT=3307
 HTTP_HOST_PORT=80
-HTTPS_HOST_PORT=443
+MARIA_HOST_PORT=3307
+
 ```
 
 ### PROCEDURE DE DEPLOIEMENT
