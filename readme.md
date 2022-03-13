@@ -6,7 +6,7 @@
 Construit à partir de l'image php8:apache et largement inspiré du dépot de [@yoanbernabeu](https://github.com/yoanbernabeu).  
 Merci à lui pour son travail.
 La stack se compose de :
-- [ x ] image PHP-8.0.13-cli (Debian) et les extensions php
+- [ v ] image PHP-8.0.13-cli (Debian) et les extensions php
 - composer, sympfony, nodeJS et Yarn
 - Mariadb dans sa dernière version
 
