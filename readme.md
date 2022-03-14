@@ -75,8 +75,8 @@ Lancer docker-compose avec la commande suivante.
 La commande _build_ va construire l'image de votre serveur www contenant apache, php8, composer, symfony et yarn. Ainsi que l'ensemble des extensions nécessaire à _PHP_ et les _frameworks_ actuels. 
 
 ```bash
-  docker-compose build
-  docker-compose up -d
+docker-compose build
+docker-compose up -d
 ```
 #### II. déploiement du projet
 
@@ -85,40 +85,36 @@ Connectez-vous au terminal du conteneur PHP, à partir de ce point, toutes les c
 **Attention** : utilisez le nom du conteneur approprié selon votre projet.
 
 ```bash
-  docker exec -it "nom_conteneur_www" bash
+docker exec -it "nom_conteneur_www" bash
 ```
 
 Utilisez la commande du _CLI Symfony_ pour créer votre nouveau projet. 
 **Attention** : donner un nom différent à votre projet sans les guillements.
 
 ```bash
-  symfony new "nouveau_projet" --full
+symfony new "nouveau_projet" --full
 ```
 
 > Cette partie n'a pas encore été testée concernant le serveur interne à symfony.  
 
 ```
-  cd new-project
-  symfony serve -d
+cd new-project
+symfony serve -d
 ```
 
 Pour assurer votre développement futur depuis un IDE, il vous faut créer un compte _user_ dans votre conteneur. Ce dernier sera identique à votre session Linux et et nous lui donnerons les droits d'accès dans ce conteneur.
 
 ```bash
-  adduser username
-  chown username:username -R .
+adduser username
+chown username:username -R .
 ```
 
 *L'application devrait être accessible à cette adresse : [http://127.0.0.1](http://127.0.0.1)*
 
-##### II. B déploiement d'un projet Symfony existant depuis votre dépot Git.
+##### [II. B déploiement d'un projet Symfony existant depuis votre dépot Git.](https://github.com/Corwin40/StackSymfony/blob/master/documentation/existSymfony.md)
 
 
-##### Connexion de l'application à la basse de données. 
-apr 
 
-```yaml
-  DATABASE_URL="postgresql://symfony:ChangeMe@database:5432/app?serverVersion=13&charset=utf8"
 ```
 
 ## Author
