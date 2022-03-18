@@ -52,6 +52,7 @@ services:
     container_name: ${PROJECT}_www
     ports:
       - ${HTTP_HOST_PORT}:80
+      - ${HTTP_HOST_PORTDEV}:8000
     volumes:
       - ./php/vhosts:/etc/apache2/sites-enabled
       - ./:/var/www/html
