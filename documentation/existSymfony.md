@@ -1,4 +1,4 @@
-##### Déploiement d'un projet Symfony existant depuis votre dépot Git.
+## Déploiement d'un projet Symfony existant depuis votre dépot Git.
 
 ##### Clonage depuis votre dépot git
 Pour cette étape, recupérer le lien de clonage de votre projet depuis le dépot Github
