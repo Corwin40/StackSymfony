@@ -7,11 +7,12 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends \
     locales apt-utils git libicu-dev g++ libxml2-dev libzip-dev libonig-dev libxslt-dev unzip libpq-dev nodejs npm wget nano \
     libpng-dev libwebp-dev libjpeg62-turbo-dev libfreetype6-dev \
-    apt-transport-https lsb-release ca-certificates
+    apt-transport-https lsb-release ca-certificates wkhtmltopdf sudo 
 
 RUN echo "en_US.UTF-8 UTF-8" > /etc/locale.gen && \
     echo "fr_FR.UTF-8 UTF-8" >> /etc/locale.gen && \
     locale-gen
+    
 
 RUN curl -sSk https://getcomposer.org/installer | php -- --disable-tls && \
    mv composer.phar /usr/local/bin/composer
@@ -39,5 +40,8 @@ RUN npm install --global yarn
 
 RUN git config --global user.email "xavier.burke@openpixl.fr" \
     &&  git config --global user.name "Xavier BURKE"
+
+RUN chown -R www-data:www-data /var/www
+USER www-data
 
 WORKDIR /var/www/html
