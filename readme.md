@@ -87,7 +87,5 @@ docker-compose up -d
 
 ##### [II. B déploiement d'un projet Symfony existant depuis votre dépot Git.](https://github.com/Corwin40/StackSymfony/blob/master/documentation/existSymfony.md)
 
-```
-
 ## Author
 - xavier Burke - OpenPixl.fr    |     [Email](xavier.burke@openpixl.fr)  /  [Web](ww.openpixl.fr)
