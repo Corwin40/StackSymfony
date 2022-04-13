@@ -13,7 +13,8 @@ adduser username
 chown username:username -R .
 ```
 
-Droit pour l'utilisateur courant : afin de modifier en local votre projet et de permettrre à apache d'azfficher correctement le développement/le déploiement du projet, il est nécessaire d'adapter les différent droits d'exécution, lecture des ficheires et dossiers.
+Droit pour l'utilisateur courant :
+Afin de modifier en local votre projet et de permettre à Apache d'afficher correctement le développement et/ou le déploiement du projet, il est nécessaire d'adapter les différents droits d'exécution, de lecture des fichiers et dossiers.
 
 ```bash
 chown -R $USER:www-data /var/www/html/"dossier_de_votre_projet"
@@ -24,8 +25,8 @@ chmod -R g+w /var/www/html/"dossier_de_votre_projet"/var
 
 ##### Connexion de l'application à la basse de données.  
 
-POSTGRES
+Pour POSTGRES
 ```yaml
-DATABASE_URL="postgresql://symfony:ChangeMe@database:5432/app?serverVersion=13&charset=utf8"
+DATABASE_URL="postgresql://symfony:ChangeMe@db/app?serverVersion=13&charset=utf8"
 ```
 MYSQL / MARIADDB
