@@ -10,6 +10,7 @@ La stack se compose de :
 - [x] composer, sympfony, nodeJS et Yarn
 - [x] Mariadb dans sa dernière version
 - [x] correction de gd pour php8 (manipulation d'image avec le bundle LiipImagine
+- [x] Ajout de la bibliothèque "WKHTMLTOPDF" (génération pdf depuis vos projet)
 
 A corriger prochainemement :
 - [ ] Ajout du port https,
@@ -85,8 +86,6 @@ docker-compose up -d
 
 
 ##### [II. B déploiement d'un projet Symfony existant depuis votre dépot Git.](https://github.com/Corwin40/StackSymfony/blob/master/documentation/existSymfony.md)
-
-
 
 ```
 
