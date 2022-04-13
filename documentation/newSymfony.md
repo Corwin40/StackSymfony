@@ -14,7 +14,8 @@ Utilisez la commande du _CLI Symfony_ pour créer votre nouveau projet.
 symfony new "nouveau_projet" --full
 ```
 
-Droit pour l'utilisateur courant : afin de modifier en local votre projet et de permettrre à apache d'azfficher correctement le développement/le déploiement du projet, il est nécessaire d'adapter les différent droits d'exécution, lecture des ficheires et dossiers.
+Droit pour l'utilisateur courant :  
+Afin de modifier en local votre projet et de permettre à **Apache** d'afficher correctement le développement et/ou le déploiement du projet, il est nécessaire d'adapter les différents droits d'exécution, de lecture des fichiers et dossiers.
 
 ```bash
 chown -R $USER:www-data /var/www/html/"dossier_de_votre_projet"
@@ -22,7 +23,7 @@ chmod -R a-rwx,u+rwX,g+rX /var/www/html/"dossier_de_votre_projet"
 chmod -R g+w /var/www/html/"dossier_de_votre_projet"/public
 chmod -R g+w /var/www/html/"dossier_de_votre_projet"/var
 ```
-Démarrage du serveur de développmement Symfony
+E,fin , on démarre du serveur de développmement Symfony
 
 ```
 cd new-project
