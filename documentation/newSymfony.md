@@ -1,3 +1,5 @@
+## Déploiement d'un nouveau projet Symfony.
+
 Connectez-vous au terminal du conteneur PHP, à partir de ce point, toutes les commandes se feront depuis le terminal du conteneur en root.  
 **Attention** : utilisez le nom du conteneur approprié selon votre projet.
 
