@@ -45,6 +45,6 @@ RUN useradd xavier -g www-data -d /home/xavier -m
 RUN echo '%xavier ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
 RUN chown -R xavier:www-data /var/www
-USER xavier
+USER root
 
 WORKDIR /var/www/html
