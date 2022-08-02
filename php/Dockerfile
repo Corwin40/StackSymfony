@@ -7,7 +7,7 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends \
     locales apt-utils sudo git libicu-dev g++ libxml2-dev libzip-dev libonig-dev libxslt-dev unzip libpq-dev nodejs npm wget nano \
     libpng-dev libwebp-dev libjpeg62-turbo-dev libfreetype6-dev \
-    apt-transport-https lsb-release ca-certificates wkhtmltopdf  
+    apt-transport-https lsb-release ca-certificates xvfb libfontconfig wkhtmltopdf  
 
 RUN echo "en_US.UTF-8 UTF-8" > /etc/locale.gen && \
     echo "fr_FR.UTF-8 UTF-8" >> /etc/locale.gen && \
