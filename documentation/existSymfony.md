@@ -1,12 +1,17 @@
 ## Déploiement d'un projet Symfony existant depuis votre dépot Git.
 
+Pour communiquer en SSH depuis votre IDE :
+```bash
+docker exec -it votre_projet bash
+```
+
 ##### Clonage depuis votre dépot git
 Pour cette étape, recupérer le lien de clonage de votre projet depuis le dépot Github
 ```bash
 git clone https://github.com/"votre_login_git"/"votreprojet".git
 ```
 
-Pour assurer votre développement futur depuis un IDE, il vous faut créer un compte _user_ dans votre conteneur. Ce dernier sera identique à votre session Linux et et nous lui donnerons les droits d'accès dans ce conteneur.
+Pour assurer votre développement futur depuis un IDE, il vous faut créer un compte _user_ dans votre conteneur. Ce dernier sera identique à votre session Linux et nous lui donnerons les droits d'accès dans ce conteneur.
 
 ```bash
 adduser username
