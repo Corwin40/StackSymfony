@@ -24,9 +24,9 @@ Code :
 https://github.com/Corwin40/StackSymfony.git
 ```
 #### 2. Ajout du fichier .env
-Le fichier _"docker-compose.yaml"_ s'appuie sur un fichier _".env"_ contenant les variables nécessaire au déploiement de la stack et de votyre serveur: la base de donnée, les  differents ports attribués à vos conteneurs, ...
+Le fichier _"docker-compose.yaml"_ s'appuie sur un fichier _".env"_ contenant les variables nécessaire au déploiement de la stack : la base de donnée, les  differents ports attribués à vos conteneurs, ...
 
-Créez ce fichier avec les commandes suivantes :
+Pour cela, créez ce fichier avec les commandes suivantes en adaptantg le contenu à votre projet :
 
 ```
   cd StackSymfony
@@ -36,8 +36,8 @@ Puis copier/coller le contenu suivant.
 
 ```
 # Variable Project
-PROJECT=sf5
-PROJECT_IP=21
+PROJECT="Nom_du_projet"
+PROJECT_IP_NETWORK="ip" (172. xx .0.0.1) 
 RESTART=no
 
 # Variables Mariadb
