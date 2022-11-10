@@ -1,5 +1,7 @@
 ## Déploiement d'un projet Symfony existant depuis votre dépot Git.
 
+### Se connecter au conteneurs www
+
 Pour communiquer en SSH depuis votre IDE :
 ```bash
 docker exec -it votre_projet bash
