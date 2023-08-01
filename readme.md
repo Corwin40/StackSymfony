@@ -37,7 +37,7 @@ Puis copier/coller le contenu suivant.
 ```
 # Variable Project
 PROJECT="Nom_du_projet"
-PROJECT_IP_NETWORK="ip" # Cette valeur vinedra completer le second groupe d'une IPV4
+PROJECT_IP_NETWORK="ip" # Cette valeur viendra completer le second groupe d'une IPV4
 RESTART=no
 
 # Variables Mariadb
