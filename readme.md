@@ -3,11 +3,11 @@
 
 **Pour du DEV ou du PROD**
 
-Construit à partir de l'image php8:apache et largement inspiré du dépot de [@yoanbernabeu](https://github.com/yoanbernabeu).  
+Construit à partir de l'image php-8.2:apache et largement inspiré du dépot de [@yoanbernabeu](https://github.com/yoanbernabeu).  
 Merci à lui pour son travail.
 La stack se compose de :
 - [x] image PHP-8.0.13-cli (Debian) et les extensions php
-- [x] composer, sympfony, nodeJS et Yarn
+- [x] composer, symfony-cli 5, nodeJS et Yarn
 - [x] Mariadb dans sa dernière version
 - [x] correction de gd pour php8 (manipulation d'image avec le bundle LiipImagine
 - [x] Ajout de la bibliothèque "WKHTMLTOPDF" (génération pdf depuis vos projet)
