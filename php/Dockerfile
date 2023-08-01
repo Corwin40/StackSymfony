@@ -18,7 +18,7 @@ RUN curl -sSk https://getcomposer.org/installer | php -- --disable-tls && \
    mv composer.phar /usr/local/bin/composer
 
 RUN curl -sS https://get.symfony.com/cli/installer | bash \
-    &&  mv /root/.symfony6/bin/symfony /usr/local/bin
+    &&  mv /root/.symfony5/bin/symfony /usr/local/bin
 
 RUN docker-php-ext-configure gd --enable-gd --with-freetype --with-jpeg --with-webp && \
     docker-php-ext-install gd && \
@@ -40,13 +40,13 @@ RUN npm install --global yarn
 
 RUN echo 'memory_limit = 4096M' >> /usr/local/etc/php/conf.d/docker-php-memlimit.ini;
 
-RUN git config --global user.email "xavier.burke@openpixl.fr" \
-    &&  git config --global user.name "Xavier BURKE"
-
 RUN useradd xavier -g www-data -d /home/xavier -m
 RUN echo '%xavier ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
 RUN chown -R xavier:www-data /var/www
 USER xavier
+
+RUN git config --global user.email "xavier.burke@openpixl.fr" \
+    &&  git config --global user.name "Xavier BURKE"
 
 WORKDIR /var/www/html
