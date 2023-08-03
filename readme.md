@@ -69,6 +69,8 @@ Ligne24
 ```bash
 <Directory /var/www/html/"nom_du_projet"/public/bundles>
 ```
+#### 4. Personnalisation du fichier _Dockerfile_
+Dans ce fichier, remplacez tous les espaces usivant _"utilisateur"_, _"email_utilisateur"_ et _"name_utilisateur"_ par vos informations personnelles sans les guillemets. 
 
 ### PROCEDURE DE DEPLOIEMENT
 
