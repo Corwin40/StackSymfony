@@ -39,13 +39,13 @@ RUN npm install --global yarn
 
 RUN echo 'memory_limit = 4096M' >> /usr/local/etc/php/conf.d/docker-php-memlimit.ini;
 
-RUN useradd xavier -g www-data -d /home/xavier -m
-RUN echo '%xavier ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+RUN useradd "utilisateur" -g www-data -d /home/"utilisateur" -m
+RUN echo '%"utilisateur" ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
-RUN chown -R xavier:www-data /var/www
-USER xavier
+RUN chown -R "utilisateur":www-data /var/www
+USER "utilisateur"
 
-RUN git config --global user.email "xavier.burke@openpixl.fr" \
-    &&  git config --global user.name "Xavier BURKE"
+RUN git config --global user.email "email_utilisateur" \
+    &&  git config --global user.name "nom_utilisateur"
 
 WORKDIR /var/www/html
